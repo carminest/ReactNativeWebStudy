@@ -1,12 +1,11 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: path.resolve(__dirname, './public/index.html'),
   filename: 'index.html',
   inject: 'body',
-})
-
+});
 
 module.exports = {
   entry: path.join(__dirname, 'index.web.js'),
@@ -35,9 +34,9 @@ module.exports = {
   },
   plugins: [HTMLWebpackPluginConfig],
   devServer: {
-  	open: true,
+    open: true,
     historyApiFallback: true,
     static: './',
     hot: true,
   },
-}
+};

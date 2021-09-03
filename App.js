@@ -7,16 +7,9 @@
  */
 
 import React from 'react';
-import type {Node} from 'react'; 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import type {Node} from 'react';
+import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
+import getApi from './lib/axios';
 
 // import {
 //   Colors,
@@ -27,7 +20,7 @@ import {
 // } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => Node = () => {
- 
+  getApi();
   return (
     <SafeAreaView>
       <View>
